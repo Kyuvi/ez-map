@@ -17,12 +17,12 @@
 ;;
 ;;; Commentary:
 ;;
-;;  Ez-map is an implimentation of Doom Emacs' `map!' macro to make mapping
+;;  Ez-map is an implementation of Doom Emacs' `map!' macro to make mapping
 ;;  keybindings easier in Emacs. It depends on `general.el' (and `cl-lib').
 ;;
-;;   I took the neccesary `doom-lib.el' and `doom-keybinds.el' functions and
+;;   I took the necessary `doom-lib.el' and `doom-keybinds.el' functions and
 ;;   merged them into `ez-map.el' removing the dependencies on `use-package',
-;;   `which-key' (which now needs to be configured seperately if used) and the rest
+;;   `which-key' (which now needs to be configured separately if used) and the rest
 ;;   of the doom ecosystem.
 ;;   .
 ;;;
