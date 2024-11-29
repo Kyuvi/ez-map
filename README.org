@@ -15,7 +15,7 @@ NOTE: while the other macros should follow their doom counterparts exactly, =aft
 Ez-map has been tested on [[https://www.gnu.org/software/emacs/][GNU Emacs]] versions 25.1 and 27.1 on Linux.
 
 * Motivation
-While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, it is a bit complex and does have a few dependencies. However Doom Emacs's =map!= macro is very simple and intuitive to use, and keybinding in vanilla [[https://www.gnu.org/software/emacs/][GNU Emacs]] (or even with [[https://www.emacswiki.org/emacs/Evil][evil-mode]]) is for me one of its serious downsides, and keybindingss are usually the first thing one wants to customize, so I decided to distill out the =map!= Macro (and the other macros connected to keybinding) into its own package that can be used easily, ergo, 'ez-map'.
+While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, it is a bit complex and does have a few dependencies. However Doom Emacs's =map!= macro is very simple and intuitive to use, and keybinding in vanilla [[https://www.gnu.org/software/emacs/][GNU Emacs]] (or even with [[https://www.emacswiki.org/emacs/Evil][evil-mode]]) is for me one of its serious downsides, and keybindings are usually the first thing one wants to customize, so I decided to distill out the =map!= Macro (and the other macros connected to keybinding) into its own package that can be used easily, ergo, 'ez-map'.
 
 * Dependencies
 - [[https://github.com/noctuid/general.el][General.el]]
@@ -27,7 +27,7 @@ While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, i
 
 * Installation
 
-Standard installation, using =require= ...
+Standard installation, using =require=...
 
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'load-path "path/to/ez-map.el")
