@@ -97,11 +97,11 @@ The localleader variables =ez-map-localleader-key= (default "SPC m") and =ez-map
 
 If you would like to support my work, please donate.
 
+** Monero
+42s4DCgjk2sguR8x1H4Svx7sBuysvrRHGCK3pfQTcEerNBUGhT43gMy6noctiGeVeo61aFzsQfGwVTxNmruy3dqb8PAyYZM
+
 ** Bitcoin
 bc1quymsg5tvyvqkcn35zzujfdrdwgxnakqaptqc5k
 
 ** LiteCoin
 ltc1q8ese8e8rl9c80emqgvek24gylz32u3d76v2e9q
-
-** Monero
-42s4DCgjk2sguR8x1H4Svx7sBuysvrRHGCK3pfQTcEerNBUGhT43gMy6noctiGeVeo61aFzsQfGwVTxNmruy3dqb8PAyYZM
