@@ -214,9 +214,8 @@ and Emacs states, and for non-evil users.")
 ;;   TTY frames.  This is a byproduct of its history with the terminal, which
 ;;   can't distinguish them either, however, Emacs has separate input events for
 ;;   many contentious keys like TAB and RET (like [tab] and [return], aka
-;;   "<tab>" and "<return>"), which are only triggered in GUI frames, so here, I
-;;   create one for C-i. Won't work in TTY frames, though. ezv's :os tty module
-;;   has a workaround for that though.
+;;   "<tab>" and "<return>"), which are only triggered in GUI frames, so here,
+;;   one is created for C-i. Won't work in TTY frames, though.
 (pcase-dolist (`(,key ,fallback . ,events)
                '(([C-i] [?\C-i] tab kp-tab)
                  ([C-m] [?\C-m] return kp-return)))

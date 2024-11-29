@@ -12,20 +12,22 @@ It also provides an =after!= macro which wraps =with-eval-after-load=.
 
 NOTE: while the other macros should follow their doom counterparts exactly, =after!= is slightly different as the Doom Emacs version is integrated with the Doom Emacs package system.
 
-Ez-map has been tested on [[https://www.gnu.org/software/emacs/][GNU Emacs]] versions 25 and 27 on Linux
+Ez-map has been tested on [[https://www.gnu.org/software/emacs/][GNU Emacs]] versions 25.1 and 27.1 on Linux.
 
 * Motivation
-While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, it is a bit complex and does have a few dependencies. However Doom Emacs's =map!= macro is very simple and intuitive to use, and keybinding in vanilla [[https://www.gnu.org/software/emacs/][GNU Emacs]] (or even with [[https://www.emacswiki.org/emacs/Evil][evil-mode]]) is for me one of its serious downsides, and keybindingss are usually the first thing one wants to customize, so I decided to distill out the =map!= Macro (and its connected helper macros) into its own package that can be used easily, ergo, 'ez-map'.
+While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, it is a bit complex and does have a few dependencies. However Doom Emacs's =map!= macro is very simple and intuitive to use, and keybinding in vanilla [[https://www.gnu.org/software/emacs/][GNU Emacs]] (or even with [[https://www.emacswiki.org/emacs/Evil][evil-mode]]) is for me one of its serious downsides, and keybindingss are usually the first thing one wants to customize, so I decided to distill out the =map!= Macro (and the other macros connected to keybinding) into its own package that can be used easily, ergo, 'ez-map'.
 
 * Dependencies
-- [[https://github.com/noctuid/general.el][General.el]],
-- [[https://elpa.gnu.org/packages/cl-lib.html][cl-lib]]  (for older Emacs versions)
+- [[https://github.com/noctuid/general.el][General.el]]
+- [[https://elpa.gnu.org/packages/cl-lib.html][cl-lib]] (for older Emacs versions)
 
 ** Optional packages
-- [[https://www.emacswiki.org/emacs/Evil][evil-mode]],
+- [[https://www.emacswiki.org/emacs/Evil][evil-mode]]
 - [[https://github.com/justbur/emacs-which-key][Which-key]]
 
 * Installation
+
+Standard installation, using =require= ...
 
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'load-path "path/to/ez-map.el")
@@ -34,7 +36,7 @@ While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, i
 (ez-map-init-leader-keys)
  #+END_SRC
 
- or with [[https://github.com/jwiegley/use-package][use-package]] using the default leader keys
+ or with [[https://github.com/jwiegley/use-package][use-package]] using the default leader keys...
 
 #+BEGIN_SRC emacs-lisp
 ;; initialize evil
@@ -51,7 +53,7 @@ To initialize the leader keys run....
 (ez-map-init-leader-keys)
  #+END_SRC
 
-In your init file after setting the leader keys if so inclined.
+In your init file, after setting the leader keys if so inclined.
 
 The leader keys can be set with the variables =ez-map-leader-key= (default "SPC") and =ez-map-leader-alt-key= (default "M-SPC").
 
