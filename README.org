@@ -11,10 +11,8 @@ NOTE: while the other macros should follow their doom counterparts exactly, =aft
 
 Ez-map has been tested on [[https://www.gnu.org/software/emacs/][Emacs]] versions 25 and 27 on Linux
 
-
 * Motivation
 While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, it is can get quite big and complex. However Doom Emacs's =map!= macro is very simple and intuitive, and keybinding in vanilla [[https://www.gnu.org/software/emacs/][Emacs]] (and with [[https://www.emacswiki.org/emacs/Evil][evil-mode]]) is for me one of the serious downsides, and keys are usually the first thing one wants to customize, so I decided to distill out the =map!= Macro (and some other connected helper macros) into its own package that can be used easily, ergo, 'ez-map'.
-
 
 * Dependencies
 - [[https://github.com/noctuid/general.el][General.el]],
@@ -58,7 +56,6 @@ If evil mode is used =ez-map-init-leader-keys= should be run after evil-mode its
 
 The localleader variables =ez-map-localleader-key= (default "SPC m") and =ez-map-localleader-alt-key= (default "M-SPC m") can also be customized.
 
-
 * Binding keys
 
 #+BEGIN_SRC emacs-lisp :eval no
@@ -87,11 +84,7 @@ The localleader variables =ez-map-localleader-key= (default "SPC m") and =ez-map
 (map! :leader
       :prefix  ("f" . "file")    ;; prefix key with which-key description
       :desc "Find file" :n "f" 'find-file)
-
-
 #+END_SRC
-
-
 
 * Donations
 
