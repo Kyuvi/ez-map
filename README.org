@@ -17,12 +17,12 @@ While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, i
 
 
 * Dependencies
- [[https://github.com/noctuid/general.el][General.el]]
- [[https://elpa.gnu.org/packages/cl-lib.html][cl-lib]]  (for older Emacs versions)
+- [[https://github.com/noctuid/general.el][General.el]],
+- [[https://elpa.gnu.org/packages/cl-lib.html][cl-lib]]  (for older Emacs versions)
 
 ** Optional packages
- [[https://www.emacswiki.org/emacs/Evil][evil-mode]]
- [[https://github.com/justbur/emacs-which-key][Which-key]]
+- [[https://www.emacswiki.org/emacs/Evil][evil-mode]],
+- [[https://github.com/justbur/emacs-which-key][Which-key]]
 
 * Installation
 
