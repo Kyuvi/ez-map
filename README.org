@@ -4,17 +4,17 @@
 The main repository is on [[https://codeberg.org/Kyuvi/ez-map][Codeberg.org]], if you are viewing this anywhere else, it is just a mirror, please use the [[https://codeberg.org/Kyuvi/ez-map][Codeberg.org]] repository for pull requests and issues, Thank you.
 
 * Description
-A centralized keybinds system for [[https://www.gnu.org/software/emacs/][Emacs]], which can integrate with the [[https://github.com/justbur/emacs-which-key][Which-key]]   package to preview available keybindings, based on [[https://github.com/doomemacs][Doom Emacs's]] keybinds system.
+A centralized keybinds system for [[https://www.gnu.org/software/emacs/][GNU Emacs]], which can integrate with the [[https://github.com/justbur/emacs-which-key][Which-key]]   package to preview available keybindings, based on [[https://github.com/doomemacs][Doom Emacs's]] keybinds system.
 
 Ez-map provides the =map!=, =cmd!=,  =cmd!!=, =cmds!=, and =kbd!= macros to make binding keys to functions easier. If evil is never loaded, then evil bindings set with =map!= are ignored (i.e. omitted entirely for performance reasons).
 
 Also an =after!= macro is included which wraps =with-eval-after-load=
 NOTE: while the other macros should follow their doom counterparts exactly, =after!= is slightly different as the Doom Emacs version is integrated with the Doom Emacs package system.
 
-Ez-map has been tested on [[https://www.gnu.org/software/emacs/][Emacs]] versions 25 and 27 on Linux
+Ez-map has been tested on [[https://www.gnu.org/software/emacs/][GNU Emacs]] versions 25 and 27 on Linux
 
 * Motivation
-While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, it is can get quite big and complex. However Doom Emacs's =map!= macro is very simple and intuitive, and keybinding in vanilla [[https://www.gnu.org/software/emacs/][Emacs]] (and with [[https://www.emacswiki.org/emacs/Evil][evil-mode]]) is for me one of the serious downsides, and keys are usually the first thing one wants to customize, so I decided to distill out the =map!= Macro (and some other connected helper macros) into its own package that can be used easily, ergo, 'ez-map'.
+While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, it is a bit complex and does have a few dependencies. However Doom Emacs's =map!= macro is very simple and intuitive to use, and keybinding in vanilla [[https://www.gnu.org/software/emacs/][GNU Emacs]] (or even with [[https://www.emacswiki.org/emacs/Evil][evil-mode]]) is for me one of its serious downsides, and keybindingss are usually the first thing one wants to customize, so I decided to distill out the =map!= Macro (and its connected helper macros) into its own package that can be used easily, ergo, 'ez-map'.
 
 * Dependencies
 - [[https://github.com/noctuid/general.el][General.el]],
