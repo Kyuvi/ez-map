@@ -1,7 +1,7 @@
 #+title: Ez-map
 # A martian keybinds system for Emacs.
 
-The main repository is on [[https://codeberg.org/Kyuvi/ez-map][Codeberg.org]], if you are viewing this anywhere else, this is just a mirror, please use the [[https://codeberg.org/Kyuvi/ez-map][Codeberg.org]] repository for pull requests and issues, Thank you.
+The main repository is on [[https://codeberg.org/Kyuvi/ez-map][Codeberg.org]], if you are viewing this anywhere else, it is just a mirror, please use the [[https://codeberg.org/Kyuvi/ez-map][Codeberg.org]] repository for pull requests and issues, Thank you.
 
 * Description
 A centralized keybinds system for [[https://www.gnu.org/software/emacs/][Emacs]], which can integrate with the [[https://github.com/justbur/emacs-which-key][Which-key]]   package to preview available keybindings, based on [[https://github.com/doomemacs][Doom Emacs's]] keybinds system.
