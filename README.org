@@ -1,0 +1,107 @@
+#+title: Ez-map
+# A martian keybinds system for Emacs.
+
+* Description
+A centralized keybinds system for [[https://www.gnu.org/software/emacs/][Emacs]], which can integrate with the [[https://github.com/justbur/emacs-which-key][Which-key]]   package to preview available keybindings, based on [[https://github.com/doomemacs][Doom Emacs's]] keybinds system.
+
+Ez-map provides the =map!=, =cmd!=,  =cmd!!=, =cmds!=, and =kbd!= macros to make binding keys to functions easier. If evil is never loaded, then evil bindings set with =map!= are ignored (i.e. omitted entirely for performance reasons).
+
+Also an =after!= macro is included which wraps =with-eval-after-load=
+NOTE: while the other macros should follow their doom counterparts exactly, =after!= is slightly different as the Doom Emacs version is integrated with the Doom Emacs package system.
+
+Ez-map has been tested on [[https://www.gnu.org/software/emacs/][Emacs]] versions 25 and 27 on Linux
+
+
+* Motivation
+While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, it is can get quite big and complex. However Doom Emacs's =map!= macro is very simple and intuitive, and keybinding in vanilla [[https://www.gnu.org/software/emacs/][Emacs]] (and with [[https://www.emacswiki.org/emacs/Evil][evil-mode]]) is for me one of the serious downsides, and keys are usually the first thing one wants to customize, so I decided to distill out the =map!= Macro (and some other connected helper macros) into its own package that can be used easily, ergo, 'ez-map'.
+
+
+* Dependencies
+ [[https://github.com/noctuid/general.el][General.el]]
+ [[https://elpa.gnu.org/packages/cl-lib.html][cl-lib]]  (for older Emacs versions)
+
+** Optional packages
+ [[https://www.emacswiki.org/emacs/Evil][evil-mode]]
+ [[https://github.com/justbur/emacs-which-key][Which-key]]
+
+* Installation
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "path/to/ez-map.el")
+(require 'ez-map)
+;; initialize evil and/or update leader key variables if so inclined
+(ez-map-init-leader-keys)
+ #+END_SRC
+
+ or with [[https://github.com/jwiegley/use-package][use-package]] using the default leader keys
+
+#+BEGIN_SRC emacs-lisp
+;; initialize evil
+(use-package ez-map
+ :init "path/to/ez-map.el"
+ :config (ez-map-init-leader-keys)) ;; initialize the leader keys
+#+END_SRC
+
+* Initialization and customization
+
+To initialize the leader keys run....
+
+#+BEGIN_SRC emacs-lisp
+(ez-map-init-leader-keys)
+ #+END_SRC
+
+In your init file after setting the leader keys if so inclined.
+
+The leader keys can be set with the variables =ez-map-leader-key= (default "SPC") and =ez-map-leader-alt-key= (default "M-SPC").
+
+If evil mode is used =ez-map-init-leader-keys= should be run after evil-mode itself is initialized.
+
+The localleader variables =ez-map-localleader-key= (default "SPC m") and =ez-map-localleader-alt-key= (default "M-SPC m") can also be customized.
+
+
+* Binding keys
+
+#+BEGIN_SRC emacs-lisp :eval no
+(map! :map ielm-map
+      :m  "C-r" 'do-something           ; C-r in motion state
+      :nv "Q" 'kill-current-buffer   ; x in normal+visual states
+      "C-x C-r" 'a-global-keybind
+      :g "C-x C-r" 'another-global-keybind  ; same as above
+
+      (:when (eq system-type 'darwin) ;; OS specific
+        :n "M-s" 'some-fn
+        :i "M-o" (cmd! (message "Hi"))))
+
+(map! (:when (featurep 'company) ; Conditional loading
+        :i "C-@" #'+company/complete
+        (:prefix "C-x"                       ; Use a prefix key
+         :i "C-l" #'+company/whole-lines)))
+
+(map! (:when (featurep 'latex)    ; local conditional
+        (:map LaTeX-mode-map
+         :localleader                  ; Use local leader
+         :desc "View" "v" #'TeX-view)) ; Add which-key description
+      :leader                           ; Use leader key from now on
+      :desc "Eval expression" ";" #'eval-expression)
+
+(map! :leader
+      :prefix  ("f" . "file")    ;; prefix key with which-key description
+      :desc "Find file" :n "f" 'find-file)
+
+
+#+END_SRC
+
+
+
+* Donations
+
+If you would like to support my work, please donate.
+
+** Bitcoin
+bc1quymsg5tvyvqkcn35zzujfdrdwgxnakqaptqc5k
+
+** LiteCoin
+ltc1q8ese8e8rl9c80emqgvek24gylz32u3d76v2e9q
+
+** Monero
+42s4DCgjk2sguR8x1H4Svx7sBuysvrRHGCK3pfQTcEerNBUGhT43gMy6noctiGeVeo61aFzsQfGwVTxNmruy3dqb8PAyYZM
