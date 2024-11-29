@@ -8,7 +8,7 @@ A centralized keybinds system for [[https://www.gnu.org/software/emacs/][GNU Ema
 
 Ez-map provides the =map!=, =cmd!=,  =cmd!!=, =cmds!=, and =kbd!= macros to make binding keys to functions easier. If evil is never loaded, then evil bindings set with =map!= are ignored (i.e. omitted entirely for performance reasons).
 
-Also an =after!= macro is included which wraps =with-eval-after-load=
+It also provides an =after!= macro is included which wraps =with-eval-after-load=
 NOTE: while the other macros should follow their doom counterparts exactly, =after!= is slightly different as the Doom Emacs version is integrated with the Doom Emacs package system.
 
 Ez-map has been tested on [[https://www.gnu.org/software/emacs/][GNU Emacs]] versions 25 and 27 on Linux
@@ -58,7 +58,7 @@ If evil mode is used =ez-map-init-leader-keys= should be run after evil-mode its
 
 The localleader variables =ez-map-localleader-key= (default "SPC m") and =ez-map-localleader-alt-key= (default "M-SPC m") can also be customized.
 
-* Binding keys
+* Key binding examples
 
 #+BEGIN_SRC emacs-lisp :eval no
 (map! :map ielm-map
