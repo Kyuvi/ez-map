@@ -15,7 +15,7 @@ NOTE: while the other macros should follow their doom counterparts exactly, =aft
 Ez-map has been tested on [[https://www.gnu.org/software/emacs/][GNU Emacs]] versions 25.1 and 27.1 on Linux.
 
 * Motivation
-While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, it is a bit complex and does have a few dependencies. However Doom Emacs's =map!= macro is very simple and intuitive to use, and keybinding in vanilla [[https://www.gnu.org/software/emacs/][GNU Emacs]] (or even with [[https://www.emacswiki.org/emacs/Evil][evil-mode]]) is for me one of its serious downsides, and keybindings are usually the first thing one wants to customize, so I decided to distill out the =map!= Macro (and the other macros connected to keybinding) into its own package that can be used easily, ergo, 'ez-map'.
+While [[https://github.com/doomemacs][Doom Emacs]] is an amazing distribution, it is a bit complex and does have a few dependencies. However Doom Emacs's =map!= macro is very simple and intuitive to use, and keybinding in vanilla [[https://www.gnu.org/software/emacs/][GNU Emacs]] (or even with [[https://www.emacswiki.org/emacs/Evil][evil-mode]]) is for me one of its serious downsides, and keybindings are usually the first thing one wants to customize, so I decided to distill out the =map!= Macro (and the other macros connected to keybinding) into a package that can be used easily, ergo, 'ez-map'.
 
 * Dependencies
 - [[https://github.com/noctuid/general.el][General.el]]
@@ -66,7 +66,7 @@ The localleader variables =ez-map-localleader-key= (default "SPC m") and =ez-map
 #+BEGIN_SRC emacs-lisp :eval no
 (map! :map ielm-map
       :m  "C-r" 'do-something           ; C-r in motion state
-      :nv "Q" 'kill-current-buffer   ; x in normal+visual states
+      :nv "Q" 'kill-current-buffer   ; Q in normal+visual states
       "C-x C-r" 'a-global-keybind
       :g "C-x C-r" 'another-global-keybind  ; same as above
 
@@ -79,7 +79,7 @@ The localleader variables =ez-map-localleader-key= (default "SPC m") and =ez-map
         (:prefix "C-x"                       ; Use a prefix key
          :i "C-l" #'+company/whole-lines)))
 
-(map! (:when (featurep 'latex)    ; local conditional
+(map! (:when (featurep 'tex-mode)    ; local conditional
         (:map LaTeX-mode-map
          :localleader                  ; Use local leader
          :desc "View" "v" #'TeX-view)) ; Add which-key description
